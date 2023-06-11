@@ -21,7 +21,7 @@ local function OnClientInitGlobalModData()
     if not isClient() then
         return;
     end
-    
+
     Respawn.Sync.LoadRemote();
 end
 
@@ -32,8 +32,6 @@ local function OnServerReceiveModData(key, modData)
 
     writeLog(Respawn.GetLogName(), "saving mod data.");
     ModData.add(key, modData);
-
-    save(true);
 end
 
 local function OnClientReceiveStatsModData(key, modData)

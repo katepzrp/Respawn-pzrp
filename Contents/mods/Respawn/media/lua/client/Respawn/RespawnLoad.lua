@@ -6,13 +6,14 @@ local function LoadPlayer()
     end
 
     LoadingPlayer = false;
+
     for i, recoverable in ipairs(Respawn.Recoverables) do
         recoverable:Load(getPlayer());
     end
 end
 
 local function OnCreatePlayer(id, player)
-    if not getPlayer():HasTrait(Respawn.Id) then
+    if not player:HasTrait(Respawn.Id) then
         return;
     end
 

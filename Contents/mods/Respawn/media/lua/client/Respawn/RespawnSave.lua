@@ -15,8 +15,6 @@ local function SavePlayer(player)
 
     if isClient() then
         Respawn.Sync.SaveRemote();
-    else
-        save(true);
     end
 
     SetRespawnAvailable();
